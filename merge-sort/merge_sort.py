@@ -13,23 +13,23 @@ def merge_sort(arr):
         return merge(left_half, right_half)
 
 
-def merge(a, b):
-    c = []
+def merge(arr_a, arr_b):
+    merged_arr = []
 
-    while len(a) > 0 and len(b) > 0:
-        if a[0] < b[0]:
-            c.append(a.pop(0))
+    while len(arr_a) > 0 and len(arr_b) > 0:
+        if arr_a[0] < arr_b[0]:
+            merged_arr.append(arr_a.pop(0))
 
         else:
-            c.append(b.pop(0))
+            merged_arr.append(arr_b.pop(0))
 
-    while len(a) > 0:
-        c.append(a.pop(0))
+    while len(arr_a) > 0:
+        merged_arr.append(arr_a.pop(0))
 
-    while len(b) > 0:
-        c.append(b.pop(0))
+    while len(arr_b) > 0:
+        merged_arr.append(arr_b.pop(0))
 
-    return c
+    return merged_arr
 
 
 if __name__ == '__main__':
